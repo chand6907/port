@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Video</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden; /* Prevents horizontal scrolling */
+      font-family: Arial, sans-serif;
+    }
+
+    video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures the video covers the entire background */
+      z-index: -1; /* Keeps the video behind other content */
+    }
+
+    .content {
+      position: relative;
+      z-index: 1; /* Places content above the video */
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    marquee {
+      display: block;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Optional: Semi-transparent background */
+      color: rgb(255, 255, 255); /* Text color */
+      font-size: 44px; /* Adjust text size */
+      margin-bottom: 20px; /* Space below the marquee */
+      font-style: italic
+    }
+
+    img {
+      display: block;
+      margin: 20px auto;
+      height: 400px; /* Adjust the size as needed */
+      width: 400px; /* Ensures the image is square for a perfect circle */
+      max-width: 90%; /* Ensures the image is responsive */
+      border-radius: 60%; /* Makes the image circular */
+      border: 5px solid white; /* Optional: Adds a border around the circle */
+    }
+
+    h1 {
+      font-size: 66px;
+      font-weight: bold; 
+    }
+  </style>
+</head>
+<body>
+  <!-- Moving marquee text -->
+  <marquee behavior="scroll" direction="left">
+    Welcome to My Portfolio
+  </marquee>
+
+  <!-- Background video -->
+  <video autoplay loop muted>
+    <source src="myvideo.mp4" type="video/mp4">
+    <i>Your browser does not support the video tag.</i>
+  </video>
+
+  <!-- Main content -->
+  <div class="content">
+    <h1>👋 I'M PRINCE CHAND</h1>
+
+    <!-- Rounded Image -->
+    <img src="pic.jpg" alt="Chand">
+    <p>This is content over the background video. Scroll down for more content!</p>
+
+    <!-- Additional content to allow scrolling -->
+    <div style="height: 1000px;">
+      <p style="text-align: center;">More content here... keep scrolling!</p>
+    </div>
+  </div>
+</body>
+</html>
