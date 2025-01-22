@@ -13,6 +13,7 @@
       font-family: Arial, sans-serif;
     }
 
+    /* Background video */
     video {
       position: fixed;
       top: 0;
@@ -23,6 +24,7 @@
       z-index: -1;
     }
 
+    /* Content Styling */
     .content {
       position: relative;
       z-index: 1;
@@ -41,6 +43,7 @@
       font-style: italic;
     }
 
+    /* Image styling */
     img {
       display: block;
       margin: 20px auto;
@@ -56,6 +59,7 @@
       font-weight: bold;
     }
 
+    /* Responsive design for smaller screens */
     @media (max-width: 768px) {
       video {
         width: 100%;
@@ -72,22 +76,28 @@
   </style>
 </head>
 <body>
+  <!-- Moving marquee text -->
   <marquee behavior="scroll" direction="left">
     Welcome to My Portfolio
   </marquee>
 
+  <!-- Background video -->
   <video autoplay loop muted playsinline>
-    <source src="myvideo.mp4" type="video/mp4">
-    <source src="myvideo.webm" type="video/webm">
-    <source src="myvideo.ogg" type="video/ogg">
+    <source src="videos/myvideo.mp4" type="video/mp4">
+    <source src="videos/myvideo.webm" type="video/webm">
+    <source src="videos/myvideo.ogg" type="video/ogg">
     <i>Your browser does not support the video tag.</i>
   </video>
 
+  <!-- Main content -->
   <div class="content">
     <h1>👋 I'M PRINCE CHAND</h1>
-    <img src="pic.jpg" alt="Chand">
+
+    <!-- Rounded Image -->
+    <img src="images/pic.jpg" alt="Chand">
     <p>This is content over the background video. Scroll down for more content!</p>
 
+    <!-- Additional content to allow scrolling -->
     <div style="height: 1000px;">
       <p style="text-align: center;">More content here... keep scrolling!</p>
     </div>
