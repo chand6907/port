@@ -55,6 +55,20 @@
       font-size: 66px;
       font-weight: bold; 
     }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      video {
+        width: 100%;
+        height: auto;
+      }
+      h1 {
+        font-size: 36px; /* Adjust font size for mobile */
+      }
+      marquee {
+        font-size: 28px; /* Smaller font for marquee on mobile */
+      }
+    }
   </style>
 </head>
 <body>
@@ -64,8 +78,10 @@
   </marquee>
 
   <!-- Background video -->
-  <video autoplay loop muted>
+  <video autoplay loop muted playsinline>
     <source src="myvideo.mp4" type="video/mp4">
+    <source src="myvideo.webm" type="video/webm">
+    <source src="myvideo.ogg" type="video/ogg">
     <i>Your browser does not support the video tag.</i>
   </video>
 
