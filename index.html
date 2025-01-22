@@ -38,7 +38,7 @@
       color: rgb(255, 255, 255); /* Text color */
       font-size: 44px; /* Adjust text size */
       margin-bottom: 20px; /* Space below the marquee */
-      font-style: italic
+      font-style: italic;
     }
 
     img {
@@ -53,14 +53,15 @@
 
     h1 {
       font-size: 66px;
-      font-weight: bold; 
+      font-weight: bold;
     }
 
     /* Mobile adjustments */
     @media (max-width: 768px) {
       video {
         width: 100%;
-        height: auto;
+        height: 100%;
+        object-fit: cover; /* Ensures the video fills the screen */
       }
       h1 {
         font-size: 36px; /* Adjust font size for mobile */
